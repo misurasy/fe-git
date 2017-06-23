@@ -1,0 +1,242 @@
+// Dz array
+//1 done
+// 1. —оздать функцию, котора€ принимает массив, а возвращает новый
+// массив с дублированными элементами входного массива:
+// doubleArray([1,2,3]) = [1,2,3,1,2,3]
+// function funk1(indexes) {
+//     let doubleArray = [];
+//      for (let i = 0; i < indexes.length; i++) {
+//        doubleArray[i] = indexes[i];
+//        }
+//     for (let i = 0; i < indexes.length; i++) {
+//      doubleArray.push(indexes[i]);
+//      }
+// return doubleArray;
+//  };
+//  let res=funk1([1, 2, 3, 5]);
+//  console.log(res);
+
+
+
+// //2 done
+// 2. ѕолучить последний элемент массива (массив не мен€ть). »спользовать
+// функцию
+
+// function funk1(indexes){
+    
+//     let elem = indexes[indexes.length-1];
+//     return elem;
+    
+// };
+// let res = funk1([1, 2, 3, 5]);
+// console.log(res);
+
+//3 done
+// 3. —оздать функцию, котора€ принимает число N и возвращает массив,
+// заполненный числами от 1 до N: getArray(10); // [1,2,3,4,5,6,7,8,9,10]
+// function funk1(n){
+//      let arr = [];
+//      for (let i = 0; i < n; i++){
+//      arr[i] = i + 1;
+//     };
+//     return arr; 
+// };
+//  let res = funk1([10]);
+//  console.log(res);
+
+
+//4 done
+// —оздать функцию, котора€ принимает произвольное (любое) число
+// массивов и удал€ет из каждого массива первый элемент, а возвращает
+// массив из оставшихс€ значений: changeCollection([1,2,3], [СaТ, ТbТ, СcТ]) > [
+// [2,3], [СbТ, СcТ] ], changeCollection([1,2,3]) > [ [2,3] ] и т.д.
+
+
+
+// function funk1(){
+//        let args = arguments;
+//         let addd = []; 
+//  for (let i=0, len = args.length; i<len; i++){
+//     args[i].shift();
+//     ////// console.log( args[i].shift())
+//     addd.push( args[i]);
+//   } 
+//     return addd; 
+// };
+// let res = funk1([1, 2, 3, 5], [1, 2, 3, 5]);
+//  console.log(res);
+
+
+
+
+// 1 done
+// ƒана произвольна€ строка УbcdaeflmjgkhiФ - упор€дочить буквы по
+// алфавиту и вернуть строку с буквами в обратном пор€дке
+// ("mlkjihgfedcba"). ќформить в виде функции.
+
+
+// function funk1(str){
+//    return   str.split('').sort().reverse().join('')
+// };
+// let res = funk1('bcdaeflmjgkhi');
+// console.log(res);
+
+
+//2 done
+// . ќтсортировать массив [2, 4, 7, 1, -2, 10, -9] в обратном пор€дке:
+// [10, 7, 4, 2, 1, -2, -9]. »спользуйте функцию.
+
+//  function funk1(arr){
+//      return   arr.sort(function (previous, next) {
+//      return  next - previous;
+// });
+//  };
+
+// let res = funk1([2, 4, 7, 1, -2, 10, -9]);
+// console.log(res);
+
+ //3 done
+// 3. Ќаписать функцию, котора€ принимает три аргумента: произвольный
+// массив и два числа, первое из которых означает начальный номер
+// элемента в массиве, второе - конечный номер. ‘ункци€ должна вернуть
+// новый массив, состо€щий из элементов первой коллекции согласно
+// аргументам (с - по): getNewArray(['a', 'b', 'c', 'd', 'e', 'f'], 2, 4) = ["c", "d", "e"]
+// »сходный массив не мен€ть. ÷иклы не использовать.
+
+//  function funk1(arr, n, k){ 
+//             let newarr = [];
+//             return newarr = arr.slice(n,k+1);
+//        };
+
+//     let res = funk1(['a', 'b', 'c', 'd', 'e', 'f'], 2, 4 );
+//     console.log(res);
+
+// 4 done
+//  ”двоить все элементы массива, не использу€ циклы
+// [СoneТ, 2, СthreeТ, 4] > [СoneТ, 2, СthreeТ, 4, СoneТ, 2, СthreeТ, 4]
+
+    // let arr = ['one', 2, 'three', 4];
+    
+    // let joinedArray = arr.concat(arr);
+    // console.log(joinedArray);
+
+
+// 5 done
+// ”далить из [1,2,3,4,5] второй и третий элементы (3,4)
+    
+    // let arr = [1,2,3,4,5];
+
+    // arr.splice(2, 2);
+    
+    // console.log(arr);
+
+//6 done
+// ”далить из [1,2,3,4,5] второй и третий элементы (3,4) и на их место
+// вставить СthreeТ, СfourТ
+
+    // let arr = [1,2,3,4,5];
+
+    // arr.splice(2, 2, 'three', 'four');
+  
+    // console.log(arr);
+
+//7 done
+// ¬ставить в произвольный массив после третьего элемента любое
+// значение, например:
+// ['I', 'am', 'an', 'array'] > ["I", "am", "an", "awesome", "array"]
+
+//  function funk1(arr, n){ 
+//             let newarr = [];
+//             arr.splice(3, 0, n);
+//             return arr;
+//        };
+
+//     let res = funk1(['I', 'am', 'an', 'array'], 'awesome');
+//     console.log(res);
+
+//8 done
+// ќтсортируйте массив массивов так, чтобы вначале располагались
+// наименьшие массивы (размер массива определ€етс€ его длиной):
+// // [ [14, 45], [1], ['a', 'c', 'd'] ] > [ [1], [14, 45], ['a', 'c', 'd'] ]
+
+// let arr =[ [14, 45], [1], ['a', 'c', 'd'] ] ;
+ 
+// arr.sort( function (prev, next) {
+// if (prev.length < next.length) return -1;
+// if (prev.length > next.length) return 1;
+// })
+ 
+//  console.log(arr);
+
+
+
+
+// 9 done
+// —оздать копию произвольного массива (slice, concat)
+//   let arr = ['one', 2, 'three', 4];
+    
+//  let joinedArray = arr.concat();
+//  let newDigits = arr.slice();
+//  console.log(joinedArray);
+//  console.log(newDigits);
+
+// 10 done
+//  ≈сть массив объектов:
+// [
+// {cpu: 'intel', info: {cores:2, сache: 3}},
+// {cpu: 'intel', info: {cores:4, сache: 4}},
+// {cpu: 'amd', info: {cores:1, сache: 1}},
+// {cpu: 'intel', info: {cores:3, сache: 2}},
+// {cpu: 'amd', info: {cores:4, сache: 2}}
+// ]
+// ќтсортировать их по возрастающему количеству €дер (cores).
+
+
+// console.log([
+// {cpu: 'intel', info: {cores:2, сache: 3}},
+// {cpu: 'intel', info: {cores:4, сache: 4}},
+// {cpu: 'amd', info: {cores:1, сache: 1}},
+// {cpu: 'intel', info: {cores:3, сache: 2}},
+// {cpu: 'amd', info: {cores:4, сache: 2}}
+// ].sort( function (prev, next) {
+// if (prev.info.cores < next.info.cores) return -1;
+// if (prev.info.cores > next.info.cores) return 1;
+// }));
+
+// 11 done
+// 11. —оздать функцию, котора€ будет принимать массив продуктов и две
+// цены.
+// ‘ункци€ должна вернуть все продукты, цена которых находитс€ в
+// указанном диапазоне, и отсортировать от дешевых к дорогим:
+// let products = [
+// {title: 'prod1', price: 5.2}, {title: 'prod2', price: 0.18},
+// {title: 'prod3', price: 15}, {title: 'prod4', price: 25},
+// {title: 'prod5', price: 18.9}, {title: 'prod6', price: 8},
+// {title: 'prod7', price: 19}, {title: 'prod8', price: 63}
+// ];
+// filterCollection(products, 15, 30) > [{...price: 15}, {...price: 18.9}, {...price: 19}, {...price:
+// 25}]
+
+
+// let product22 = [
+//  {title: 'prod1', price: 5.2}, {title: 'prod2', price: 0.18},
+//  {title: 'prod3', price: 15}, {title: 'prod4', price: 25},
+//  {title: 'prod5', price: 18.9}, {title: 'prod6', price: 8},
+//  {title: 'prod7', price: 19}, {title: 'prod8', price: 63}
+//  ];
+
+// function funk1(products, a, b){ 
+// let newarr = [];
+//    for (let i=0, len = products.length; i<len; i++){
+//         if (products[i].price<=b && products[i].price>=a) {
+//         newarr[i] = products[i];
+//         }
+//  }
+//     return newarr.sort( function (prev, next) {
+//         if (prev.price < next.price) return -1;
+//         if (prev.price > next.price) return 1;
+//         });
+//  }
+
+//  let res = funk1(product22, 15, 26 );
+//  console.log(res);
